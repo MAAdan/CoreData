@@ -1,4 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BasketballPlayerStoredEntity" representedClassName="BasketballPlayerStoredEntity" syncable="YES">
+        <attribute name="differential" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="positions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BasketballPositionStoredEntity" inverseName="player" inverseEntity="BasketballPositionStoredEntity" syncable="YES"/>
+        <relationship name="stats" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BasketballStatsStoredEntity" inverseName="player" inverseEntity="BasketballStatsStoredEntity" syncable="YES"/>
+        <relationship name="team" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BasketballTeamStoredEntity" inverseName="player" inverseEntity="BasketballTeamStoredEntity" syncable="YES"/>
+    </entity>
+    <entity name="BasketballPositionStoredEntity" representedClassName="BasketballPositionStoredEntity" syncable="YES">
+        <attribute name="position" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BasketballPlayerStoredEntity" inverseName="positions" inverseEntity="BasketballPlayerStoredEntity" syncable="YES"/>
+    </entity>
+    <entity name="BasketballStatsStoredEntity" representedClassName="BasketballStatsStoredEntity" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BasketballPlayerStoredEntity" inverseName="stats" inverseEntity="BasketballPlayerStoredEntity" syncable="YES"/>
+    </entity>
+    <entity name="BasketballTeamStoredEntity" representedClassName="BasketballTeamStoredEntity" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="player" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BasketballPlayerStoredEntity" inverseName="team" inverseEntity="BasketballPlayerStoredEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BasketballPlayerStoredEntity" positionX="-803" positionY="-1539" width="128" height="133"/>
+        <element name="BasketballPositionStoredEntity" positionX="-612" positionY="-1656" width="128" height="73"/>
+        <element name="BasketballStatsStoredEntity" positionX="-587" positionY="-1485" width="128" height="88"/>
+        <element name="BasketballTeamStoredEntity" positionX="-612" positionY="-1258" width="128" height="88"/>
+    </elements>
 </model>

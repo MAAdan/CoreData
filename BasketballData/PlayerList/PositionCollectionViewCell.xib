@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PositionCollectionViewCell" customModule="BasketballData" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="119" height="83"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="119" height="83"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4N-ar-YzK">
+                        <rect key="frame" x="0.0" y="0.0" width="119" height="83"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90g-UY-Ita">
+                                <rect key="frame" x="0.0" y="0.0" width="119" height="83"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.043137254901960784" green="0.5725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="90g-UY-Ita" firstAttribute="leading" secondItem="k4N-ar-YzK" secondAttribute="leading" id="6bx-82-knU"/>
+                            <constraint firstAttribute="trailing" secondItem="90g-UY-Ita" secondAttribute="trailing" id="C92-xC-Yoy"/>
+                            <constraint firstItem="90g-UY-Ita" firstAttribute="top" secondItem="k4N-ar-YzK" secondAttribute="top" id="QsD-gq-fNm"/>
+                            <constraint firstAttribute="bottom" secondItem="90g-UY-Ita" secondAttribute="bottom" id="U9w-WA-rrY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="k4N-ar-YzK" secondAttribute="trailing" id="GG7-Md-Fkc"/>
+                <constraint firstAttribute="bottom" secondItem="k4N-ar-YzK" secondAttribute="bottom" id="SSM-d9-Qch"/>
+                <constraint firstItem="k4N-ar-YzK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="VND-Nl-kzs"/>
+                <constraint firstItem="k4N-ar-YzK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eB9-Q5-dlj"/>
+            </constraints>
+            <size key="customSize" width="119" height="83"/>
+            <connections>
+                <outlet property="positionBackground" destination="k4N-ar-YzK" id="PV9-jy-Y9y"/>
+                <outlet property="positionText" destination="90g-UY-Ita" id="ROC-BB-chB"/>
+            </connections>
+            <point key="canvasLocation" x="68.5" y="37.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

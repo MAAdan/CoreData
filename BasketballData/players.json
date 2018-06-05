@@ -1,0 +1,577 @@
+[{
+        "id": "abdulka01",
+        "name": "Kareem Abdul-Jabbar",
+        "positions": ["pg", "sg"],
+        "team": {
+            "name": "Los Angeles Lakers",
+            "id": "LAL"
+        },
+        "differential": 10.598,
+        "stats": [{
+            "name": "rebounds",
+            "value": 8.546
+        }, {
+            "name": "points",
+            "value": 22.519
+        }, {
+            "name": "assists",
+            "value": 12.345
+        }, {
+            "name": "steals",
+            "value": 8.234
+        }]
+    },
+    {
+        "id": "architi01",
+        "name": "Nate Archibald",
+        "positions": ["pg", "sf", "pf", "c"],
+        "team": {
+            "name": "New York Nets",
+            "id": "BKN"
+        },
+        "differential": 9.535,
+        "stats": [{
+                "name": "rebounds",
+                "value": 34.678
+            }, {
+                "name": "points",
+                "value": 45.789
+            },
+            {
+                "name": "assists",
+                "value": 23.567
+            }, {
+                "name": "steals",
+                "value": 6.789
+            }
+        ]
+    }, {
+        "id": "paulariz01",
+        "name": "Paul Arizin",
+        "positions": ["sg", "sf", "pf"],
+        "team": {
+            "name": "Philadelphia Warriors",
+            "id": "PHI"
+        },
+        "differential": 23.678,
+        "stats": [{
+                "name": "rebounds",
+                "value": 23.768
+            }, {
+                "name": "points",
+                "value": 12.67
+            },
+            {
+                "name": "assists",
+                "value": 45.78
+            }, {
+                "name": "steals",
+                "value": 4.786
+            }
+        ]
+    }, {
+        "id": "charbar01",
+        "name": "Charles Barkley",
+        "positions": ["c"],
+        "team": {
+            "name": "Phoenix Suns",
+            "id": "PHX"
+        },
+        "differential": 26.678,
+        "stats": [{
+                "name": "rebounds",
+                "value": 12.67
+            }, {
+                "name": "points",
+                "value": 21.567
+            },
+            {
+                "name": "assists",
+                "value": 26.954
+            }, {
+                "name": "steals",
+                "value": 9.349
+            }
+        ]
+    }, {
+        "id": "rickbarr01",
+        "name": "Rick Barry",
+        "positions": ["pg"],
+        "team": {
+            "name": "Houston Rockets",
+            "id": "RCK"
+        },
+        "differential": 87.765,
+        "stats": [{
+                "name": "rebounds",
+                "value": 76.456
+            }, {
+                "name": "points",
+                "value": 56.123
+            },
+            {
+                "name": "assists",
+                "value": 13.690
+            }, {
+                "name": "steals",
+                "value": 34.677
+            }
+        ]
+    }, {
+        "id": "elginba01",
+        "name": "Elgin Baylor",
+        "positions": ["pg", "sg", "sf", "pf", "c"],
+        "team": {
+            "name": "Los Angeles Lakers",
+            "id": "LAL"
+        },
+        "differential": 73.894,
+        "stats": [{
+                "name": "rebounds",
+                "value": 4.365
+            }, {
+                "name": "points",
+                "value": 25.145
+            },
+            {
+                "name": "assists",
+                "value": 7.965
+            }, {
+                "name": "steals",
+                "value": 1.654
+            }
+        ]
+    }, {
+        "id": "davebin01",
+        "name": "Dave Bing",
+        "positions": ["pg", "sg", "c"],
+        "team": {
+            "name": "Washington Bullets",
+            "id": "WBL"
+        },
+        "differential": 45.932,
+        "stats": [{
+                "name": "rebounds",
+                "value": 5.789
+            }, {
+                "name": "points",
+                "value": 23.809
+            },
+            {
+                "name": "assists",
+                "value": 9.532
+            }, {
+                "name": "steals",
+                "value": 15.562
+            }
+        ]
+    }, {
+        "id": "larrybi01",
+        "name": "Larry Bird",
+        "positions": ["pg", "c"],
+        "team": {
+            "name": "Boston Celtics",
+            "id": "BCL"
+        },
+        "differential": 12.890,
+        "stats": [{
+                "name": "rebounds",
+                "value": 56.197
+            }, {
+                "name": "points",
+                "value": 5.709
+            },
+            {
+                "name": "assists",
+                "value": 5.756
+            }, {
+                "name": "steals",
+                "value": 8.465
+            }
+        ]
+    }, {
+        "id": "wilcham01",
+        "name": "Wilt Chamberlain",
+        "positions": ["pf", "c"],
+        "team": {
+            "name": "San Francisco Warriors",
+            "id": "SFW"
+        },
+        "differential": 71.023,
+        "stats": [{
+                "name": "rebounds",
+                "value": 4.973
+            }, {
+                "name": "points",
+                "value": 8.679
+            },
+            {
+                "name": "assists",
+                "value": 4.764
+            }, {
+                "name": "steals",
+                "value": 8.613
+            }
+        ]
+    }, {
+        "id": "bobcous01",
+        "name": "Bob Cousy",
+        "positions": ["pg", "c"],
+        "team": {
+            "name": "Boston Celtics",
+            "id": "BCL"
+        },
+        "differential": 35.765,
+        "stats": [{
+                "name": "rebounds",
+                "value": 40.695
+            }, {
+                "name": "points",
+                "value": 54.498
+            },
+            {
+                "name": "assists",
+                "value": 12.023
+            }, {
+                "name": "steals",
+                "value": 8.369
+            }
+        ]
+    }, {
+        "id": "davecow01",
+        "name": "Dave Cowens",
+        "positions": ["sg"],
+        "team": {
+            "name": "Boston Celtics",
+            "id": "BCL"
+        },
+        "differential": 56.547,
+        "stats": [{
+                "name": "rebounds",
+                "value": 6.301
+            }, {
+                "name": "points",
+                "value": 9.145
+            },
+            {
+                "name": "assists",
+                "value": 4.197
+            }, {
+                "name": "steals",
+                "value": 7.465
+            }
+        ]
+    }, {
+        "id": "billycun01",
+        "name": "Billy Cunningham",
+        "positions": ["sf"],
+        "team": {
+            "name": "Philadelphia 76ers",
+            "id": "P76"
+        },
+        "differential": 5.698,
+        "stats": [{
+                "name": "rebounds",
+                "value": 7.651
+            }, {
+                "name": "points",
+                "value": 4.631
+            },
+            {
+                "name": "assists",
+                "value": 4.197
+            }, {
+                "name": "steals",
+                "value": 12.975
+            }
+        ]
+    }, {
+        "id": "davedeb01",
+        "name": "Dave DeBusschere",
+        "positions": ["pf"],
+        "team": {
+            "name": "Detroit Pistons",
+            "id": "DTP"
+        },
+        "differential": 45.978,
+        "stats": [{
+                "name": "rebounds",
+                "value": 45.464
+            }, {
+                "name": "points",
+                "value": 8.167
+            },
+            {
+                "name": "assists",
+                "value": 7.652
+            }, {
+                "name": "steals",
+                "value": 4.976
+            }
+        ]
+    }, {
+        "id": "clydedrex01",
+        "name": "Clyde Drexler",
+        "positions": ["sg", "pf"],
+        "team": {
+            "name": "Portland Trail Blazers",
+            "id": "PTB"
+        },
+        "differential": 7.569,
+        "stats": [{
+                "name": "rebounds",
+                "value": 7.698
+            }, {
+                "name": "points",
+                "value": 7.129
+            },
+            {
+                "name": "assists",
+                "value": 9.468
+            }, {
+                "name": "steals",
+                "value": 4.596
+            }
+        ]
+    }, {
+        "id": "julervin07",
+        "name": "Julius Erving",
+        "positions": ["pg", "sf", "c"],
+        "team": {
+            "name": "Philadelphia 76ers",
+            "id": "P76"
+        },
+        "differential": 5.798,
+        "stats": [{
+                "name": "rebounds",
+                "value": 4.369
+            }, {
+                "name": "points",
+                "value": 7.165
+            },
+            {
+                "name": "assists",
+                "value": 4.654
+            }, {
+                "name": "steals",
+                "value": 7.975
+            }
+        ]
+    }, {
+        "id": "patrewi01",
+        "name": "Patrick Ewing",
+        "positions": ["pg", "c"],
+        "team": {
+            "name": "New York Knicks",
+            "id": "NYK"
+        },
+        "differential": 6.789,
+        "stats": [{
+                "name": "rebounds",
+                "value": 7.365
+            }, {
+                "name": "points",
+                "value": 45.497
+            },
+            {
+                "name": "assists",
+                "value": 8.631
+            }, {
+                "name": "steals",
+                "value": 12.963
+            }
+        ]
+    }, {
+        "id": "waltfra01",
+        "name": "Walt Frazier",
+        "positions": ["pf", "c"],
+        "team": {
+            "name": "New York Knicks",
+            "id": "NYK"
+        },
+        "differential": 45.631,
+        "stats": [{
+                "name": "rebounds",
+                "value": 31.496
+            }, {
+                "name": "points",
+                "value": 12.963
+            },
+            {
+                "name": "assists",
+                "value": 78.654
+            }, {
+                "name": "steals",
+                "value": 6.789
+            }
+        ]
+    }, {
+        "id": "geogerv01",
+        "name": "George Gervin",
+        "positions": ["sf", "c"],
+        "team": {
+            "name": "Chicago Bulls",
+            "id": "CHB"
+        },
+        "differential": 3.468,
+        "stats": [{
+                "name": "rebounds",
+                "value": 45.691
+            }, {
+                "name": "points",
+                "value": 19.465
+            },
+            {
+                "name": "assists",
+                "value": 23.469
+            }, {
+                "name": "steals",
+                "value": 16.898
+            }
+        ]
+    }, {
+        "id": "halgree01",
+        "name": "Hal Greer",
+        "positions": ["pg", "sg", "c"],
+        "team": {
+            "name": "Syracuse Nationals",
+            "id": "SNA"
+        },
+        "differential": 65.318,
+        "stats": [{
+                "name": "rebounds",
+                "value": 78.631
+            }, {
+                "name": "points",
+                "value": 45.638
+            },
+            {
+                "name": "assists",
+                "value": 7.634
+            }, {
+                "name": "steals",
+                "value": 23.934
+            }
+        ]
+    }, {
+        "id": "johnhal01",
+        "name": "John Havlicek",
+        "positions": ["pg", "sg"],
+        "team": {
+            "name": "Boston Celtics",
+            "id": "BCL"
+        },
+        "differential": 17.634,
+        "stats": [{
+                "name": "rebounds",
+                "value": 98.536
+            }, {
+                "name": "points",
+                "value": 78.2364
+            },
+            {
+                "name": "assists",
+                "value": 2.365
+            }, {
+                "name": "steals",
+                "value": 1.697
+            }
+        ]
+    }, {
+        "id": "elvinha01",
+        "name": "Elvin Hayes",
+        "positions": ["pg", "pf", "c"],
+        "team": {
+            "name": "San Diego",
+            "id": "SND"
+        },
+        "differential": 3.954,
+        "stats": [{
+                "name": "rebounds",
+                "value": 5.315
+            }, {
+                "name": "points",
+                "value": 7.516
+            },
+            {
+                "name": "assists",
+                "value": 8.346
+            }, {
+                "name": "steals",
+                "value": 5.197
+            }
+        ]
+    }, {
+        "id": "magijoh01",
+        "name": "Magic Johnson",
+        "positions": ["pg", "sf", "pf", "c"],
+        "team": {
+            "name": "Los Angeles Lakers",
+            "id": "LAL"
+        },
+        "differential": 6.897,
+        "stats": [{
+                "name": "rebounds",
+                "value": 6.666
+            }, {
+                "name": "points",
+                "value": 7.777
+            },
+            {
+                "name": "assists",
+                "value": 8.568
+            }, {
+                "name": "steals",
+                "value": 9.462
+            }
+        ]
+    }, {
+        "id": "samjone01",
+        "name": "Sam Jones",
+        "positions": ["sf", "c"],
+        "team": {
+            "name": "Boston Celtics",
+            "id": "BCL"
+        },
+        "differential": 9.456,
+        "stats": [{
+                "name": "rebounds",
+                "value": 5.795
+            }, {
+                "name": "points",
+                "value": 53.147
+            },
+            {
+                "name": "assists",
+                "value": 8.631
+            }, {
+                "name": "steals",
+                "value": 8.369
+            }
+        ]
+    }, {
+        "id": "michjor01",
+        "name": "Michael Jordan",
+        "positions": ["pg", "pf", "c"],
+        "team": {
+            "name": "Chicago Bulls",
+            "id": "CHB"
+        },
+        "differential": 99.999,
+        "stats": [{
+                "name": "rebounds",
+                "value": 99.998
+            }, {
+                "name": "points",
+                "value": 70.963
+            },
+            {
+                "name": "assists",
+                "value": 52.432
+            }, {
+                "name": "steals",
+                "value": 78.369
+            }
+        ]
+    }
+]

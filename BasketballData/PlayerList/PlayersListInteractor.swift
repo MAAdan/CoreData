@@ -37,8 +37,8 @@ class PlayersInteractor {
         self.persistantStorageHandler = persistantStorageHandler
     }
     
-    func getPlayers(success: BasketballPlayersInteractorSuccessClosure,
-                    error: BasketballPlayersInteractorErrorClosure) {
+    func getPlayers(success: @escaping BasketballPlayersInteractorSuccessClosure,
+                    error: @escaping BasketballPlayersInteractorErrorClosure) {
         
         persistantStorageHandler.fetch(success: { [weak self] (players) in
             if let sortedPlayers = self?.sortPlayers(players) {
@@ -60,18 +60,20 @@ class PlayersInteractor {
                 error(NSError(domain: "ListPlayersInteractor.app.com", code: 500, userInfo: userInfo))
             }
         }) { (storageError) in
-            
-            requestHandler.request(success: { [weak self] (playersDictionary) in
-                
-                if let parsedPlayers = self?.parser.parse(playersDictionary: playersDictionary), let sortedPlayers = self?.sortPlayers(parsedPlayers) {
-                    self?.players = sortedPlayers
-                    self?.filteredPlayers = sortedPlayers
-                    self?.persistantStorageHandler.save(players: players, success: {
-                        success(players)
-                    }, error: { (saveError) in
-                        error(saveError)
-                    })
+            self.requestHandler.request(success: { [weak self] (playersDictionary) in
+                guard let strongSelf = self else {
+                    return
                 }
+                
+                let parsedPlayers = strongSelf.parser.parse(playersDictionary: playersDictionary)
+                let sortedPlayers = strongSelf.sortPlayers(parsedPlayers)
+                strongSelf.players = sortedPlayers
+                strongSelf.filteredPlayers = sortedPlayers
+                strongSelf.persistantStorageHandler.save(players: strongSelf.players, success: {
+                    success(strongSelf.players)
+                }, error: { (saveError) in
+                    error(saveError)
+                })
             }) { (requestError) in
                 error(requestError)
             }

@@ -42,6 +42,7 @@
 		8B8F9CEA20C6544B0017AF3C /* PositionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8F9CE820C6544B0017AF3C /* PositionCollectionViewCell.xib */; };
 		8B8F9CEC20C654B80017AF3C /* NSObject+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F9CEB20C654B80017AF3C /* NSObject+Convenience.swift */; };
 		8B8F9CEE20C65DB20017AF3C /* players.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B8F9CE020C651F70017AF3C /* players.json */; };
+		8B8F9CF020C797F70017AF3C /* Dictionary+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F9CEF20C797F70017AF3C /* Dictionary+Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		8B8F9CE720C6544B0017AF3C /* PositionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B8F9CE820C6544B0017AF3C /* PositionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionCollectionViewCell.xib; sourceTree = "<group>"; };
 		8B8F9CEB20C654B80017AF3C /* NSObject+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Convenience.swift"; sourceTree = "<group>"; };
+		8B8F9CEF20C797F70017AF3C /* Dictionary+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Error.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 			children = (
 				8B8F9CEB20C654B80017AF3C /* NSObject+Convenience.swift */,
 				8B34E96820C6437300D9CE44 /* UIColor+Basketball.swift */,
+				8B8F9CEF20C797F70017AF3C /* Dictionary+Error.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 			files = (
 				8B34E93820C638EB00D9CE44 /* BasketballData.xcdatamodeld in Sources */,
 				8B34E95A20C640CA00D9CE44 /* PlayersListInteractor.swift in Sources */,
+				8B8F9CF020C797F70017AF3C /* Dictionary+Error.swift in Sources */,
 				8B34E96120C6416600D9CE44 /* BasketballStats.swift in Sources */,
 				8B8F9CE920C6544B0017AF3C /* PositionCollectionViewCell.swift in Sources */,
 				8B8F9CD620C6509F0017AF3C /* PlayersParser.swift in Sources */,

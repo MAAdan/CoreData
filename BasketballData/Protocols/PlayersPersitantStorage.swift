@@ -13,6 +13,6 @@ protocol PlayersPersitantStorage {
     typealias FetchPlayersPersitantStorageSuccess = (_ players: [BasketballPlayer]) -> Void
     typealias PlayersPersitantStorageError = (_ error: Error) -> Void
     
-    func fetch(success: FetchPlayersPersitantStorageSuccess, error: PlayersPersitantStorageError)
+    func fetch(success: @escaping FetchPlayersPersitantStorageSuccess, error: @escaping PlayersPersitantStorageError)
     func save(players: [BasketballPlayer], success: SavePlayersPersitantStorageSuccess, error: PlayersPersitantStorageError)
 }

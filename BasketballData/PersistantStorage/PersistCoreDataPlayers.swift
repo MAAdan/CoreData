@@ -92,7 +92,7 @@ class PersistCoreDataPlayers: PlayersPersitantStorage, ManagedContextEntity {
         }
     }
     
-    func fetch(success: FetchPlayersPersitantStorageSuccess, error: PlayersPersitantStorageError) {
+    func fetch(success: @escaping FetchPlayersPersitantStorageSuccess, error: @escaping PlayersPersitantStorageError) {
         
         if let managedObjectContext = managedObjectContext {
             
@@ -100,25 +100,23 @@ class PersistCoreDataPlayers: PlayersPersitantStorage, ManagedContextEntity {
             //let sortDescriptor = NSSortDescriptor(key: "lastModified", ascending: false)
             //fetchRequest.sortDescriptors = [sortDescriptor]
             
-            do {
-                if let storedPlayers = try managedObjectContext.fetch(fetchRequest) as? [BasketballPlayerStoredEntity] {
-                    
-                    if storedPlayers.count > 0 {
-                        let players = mapStoredEntitiesIntoPlayers(storedPlayers)
-                        success(players)
-                    } else {
-                        error(NSError(domain: "FetchCoreDataPlayers.app.com", code: 400, userInfo: nil))
-                    }
+            let asyncFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest, completionBlock: { (result: NSAsynchronousFetchResult) in
+                
+                if let storedPlayers = result.finalResult as? [BasketballPlayerStoredEntity], storedPlayers.count > 0 {
+                    let players = self.mapStoredEntitiesIntoPlayers(storedPlayers)
+                    success(players)
+                } else {
+                    error(NSError(domain: "FetchCoreDataPlayers.app.com", code: 400, userInfo: nil))
                 }
+            })
+            
+            do {
+                try managedObjectContext.execute(asyncFetchRequest)
             } catch let err {
                 error(err)
             }
         } else {
-            let userInfo: [String : Any] = [
-                NSLocalizedDescriptionKey :  NSLocalizedString("Persistant storage fetch error", value: "Managed context error ", comment: "Imposible to fetch data from a nil value"),
-                NSLocalizedFailureReasonErrorKey : NSLocalizedString("Persistant storage fetch error", value: "Managed context error ", comment: "Imposible to fetch data from a nil value"),
-            ]
-            
+            let userInfo = Dictionary<String, Any>.createErrorUserInfoData(message: "Persistant storage fetch error", value: "Managed context error", comment: "Imposible to fetch data from a nil value")
             error(NSError(domain: "FetchCoreDataPlayers.app.com", code: 500, userInfo: userInfo))
         }
     }

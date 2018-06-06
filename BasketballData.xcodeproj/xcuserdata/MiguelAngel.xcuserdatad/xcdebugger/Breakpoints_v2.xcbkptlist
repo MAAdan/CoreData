@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BasketballData/PlayerList/PlayersListViewController.swift"
-            timestampString = "549871826.148283"
+            timestampString = "549956538.296441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -41,12 +41,28 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BasketballData/PersistantStorage/PersistCoreDataPlayers.swift"
-            timestampString = "549953088.103132"
+            filePath = "BasketballData/PlayerList/PlayersListInteractor.swift"
+            timestampString = "549956538.297104"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "getPlayers(success:error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BasketballData/PersistantStorage/PersistCoreDataPlayers.swift"
+            timestampString = "549956538.2971849"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "fetch(success:error:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -43,6 +43,7 @@
 		8B8F9CEC20C654B80017AF3C /* NSObject+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F9CEB20C654B80017AF3C /* NSObject+Convenience.swift */; };
 		8B8F9CEE20C65DB20017AF3C /* players.json in Resources */ = {isa = PBXBuildFile; fileRef = 8B8F9CE020C651F70017AF3C /* players.json */; };
 		8B8F9CF020C797F70017AF3C /* Dictionary+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F9CEF20C797F70017AF3C /* Dictionary+Error.swift */; };
+		8B8F9CF220C7A5AA0017AF3C /* ViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8F9CF120C7A5AA0017AF3C /* ViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		8B8F9CE820C6544B0017AF3C /* PositionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PositionCollectionViewCell.xib; sourceTree = "<group>"; };
 		8B8F9CEB20C654B80017AF3C /* NSObject+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Convenience.swift"; sourceTree = "<group>"; };
 		8B8F9CEF20C797F70017AF3C /* Dictionary+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Error.swift"; sourceTree = "<group>"; };
+		8B8F9CF120C7A5AA0017AF3C /* ViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				8B8F9CEB20C654B80017AF3C /* NSObject+Convenience.swift */,
 				8B34E96820C6437300D9CE44 /* UIColor+Basketball.swift */,
 				8B8F9CEF20C797F70017AF3C /* Dictionary+Error.swift */,
+				8B8F9CF120C7A5AA0017AF3C /* ViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				8B8F9CCE20C64A5A0017AF3C /* BasketballPositionStoredEntity+CoreDataClass.swift in Sources */,
 				8B8F9CCD20C64A5A0017AF3C /* BasketballStatsStoredEntity+CoreDataProperties.swift in Sources */,
 				8B8F9CE520C654180017AF3C /* PlayerInfoTableViewCell.swift in Sources */,
+				8B8F9CF220C7A5AA0017AF3C /* ViewController+Alert.swift in Sources */,
 				8B34E93020C638EB00D9CE44 /* AppDelegate.swift in Sources */,
 				8B8F9CEC20C654B80017AF3C /* NSObject+Convenience.swift in Sources */,
 				8B8F9CDB20C651290017AF3C /* RequestRemotePlayers.swift in Sources */,

@@ -80,6 +80,12 @@ class PlayersInteractor {
         return sortedPlayers
     }
     
+    func resetPlayers() {
+        for player in filteredPlayers {
+            player.differential = 0
+        }
+    }
+    
     func applyFilters(searchText: String, basketballPlayers: [BasketballPlayer]) -> [BasketballPlayer] {
         let playersTmp: [BasketballPlayer]
         

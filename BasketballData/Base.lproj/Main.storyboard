@@ -29,22 +29,31 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LvD-6c-Ok3">
-                                        <rect key="frame" x="0.0" y="16" width="60" height="48"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="Qeq-Kw-1C4"/>
-                                        </constraints>
+                                        <rect key="frame" x="8" y="16" width="175.5" height="48"/>
+                                        <state key="normal" title="Set to zero"/>
+                                        <connections>
+                                            <action selector="setToZeroAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V8P-2y-PjS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLI-Pg-yol">
+                                        <rect key="frame" x="191.5" y="16" width="175.5" height="48"/>
                                         <state key="normal" title="Reset"/>
                                         <connections>
-                                            <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V8P-2y-PjS"/>
+                                            <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7u0-zf-KND"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="VLI-Pg-yol" firstAttribute="top" secondItem="LvD-6c-Ok3" secondAttribute="top" id="105-IW-Hng"/>
                                     <constraint firstItem="LvD-6c-Ok3" firstAttribute="top" secondItem="iS3-RK-gLc" secondAttribute="top" constant="16" id="2gZ-h8-CT5"/>
+                                    <constraint firstItem="VLI-Pg-yol" firstAttribute="leading" secondItem="LvD-6c-Ok3" secondAttribute="trailing" constant="8" id="3Gl-JG-Nyi"/>
                                     <constraint firstAttribute="bottom" secondItem="LvD-6c-Ok3" secondAttribute="bottom" id="QUm-hz-UFs"/>
                                     <constraint firstAttribute="height" constant="64" id="ZHo-Wz-rfr"/>
-                                    <constraint firstItem="LvD-6c-Ok3" firstAttribute="leading" secondItem="iS3-RK-gLc" secondAttribute="leading" id="lGK-US-FRe"/>
+                                    <constraint firstItem="VLI-Pg-yol" firstAttribute="width" secondItem="LvD-6c-Ok3" secondAttribute="width" id="bLB-9l-zI7"/>
+                                    <constraint firstAttribute="trailing" secondItem="VLI-Pg-yol" secondAttribute="trailing" constant="8" id="fkX-hq-1Jf"/>
+                                    <constraint firstItem="LvD-6c-Ok3" firstAttribute="leading" secondItem="iS3-RK-gLc" secondAttribute="leading" constant="8" id="lGK-US-FRe"/>
+                                    <constraint firstItem="VLI-Pg-yol" firstAttribute="bottom" secondItem="LvD-6c-Ok3" secondAttribute="bottom" id="nF6-wQ-drZ"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -66,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="137.5" y="133.5"/>
         </scene>
     </scenes>
 </document>

@@ -27,7 +27,6 @@ class PlayersInteractor {
         .c: false
     ]
     
-    
     init(parser: BasketballPlayersParser,
          requestHandler: PlayersRequestHandler,
          persistantStorageHandler: PlayersPersitantStorage) {
@@ -80,9 +79,39 @@ class PlayersInteractor {
         return sortedPlayers
     }
     
-    func resetPlayers() {
-        for player in filteredPlayers {
-            player.differential = 0
+    func resetPlayers(completion: () -> Void) {
+        
+        self.requestHandler.request(success: { [weak self] (playersDictionary) in
+            guard let strongSelf = self else {
+                return
+            }
+            
+            strongSelf.persistantStorageHandler.removePlayers(completion: { (error) in
+                if error == nil {
+                    let parsedPlayers = strongSelf.parser.parse(playersDictionary: playersDictionary)
+                    let sortedPlayers = strongSelf.sortPlayers(parsedPlayers)
+                    strongSelf.players = sortedPlayers
+                    strongSelf.filteredPlayers = sortedPlayers
+                    
+                    strongSelf.persistantStorageHandler.save(players: strongSelf.players, success: {
+                        completion()
+                    }, error: { (saveError) in
+                        
+                    })
+                }
+            })
+        }) { (requestError) in
+            
+        }
+    }
+    
+    func setDifferentialToZero(completion: (_ updated: Int) -> Void) {
+        persistantStorageHandler.setDifferentialToZero { updated in
+            for player in filteredPlayers {
+                player.differential = 0
+            }
+            
+            completion(updated)
         }
     }
     

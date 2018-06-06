@@ -15,4 +15,6 @@ protocol PlayersPersitantStorage {
     
     func fetch(success: @escaping FetchPlayersPersitantStorageSuccess, error: @escaping PlayersPersitantStorageError)
     func save(players: [BasketballPlayer], success: SavePlayersPersitantStorageSuccess, error: PlayersPersitantStorageError)
+    func setDifferentialToZero(completion: (_ updated: Int) -> Void)
+    func removePlayers(completion: (_ error: Error?) -> Void)
 }

@@ -48,25 +48,17 @@ class PlayersListViewController: UIViewController, ManagedContextEntity {
     }
     
     @IBAction func resetAction(_ sender: Any) {
-        // This method will perform a batch update on the differential value of the player
-        let batchUpdate = NSBatchUpdateRequest(entityName: "BasketballPlayerStoredEntity")
-        batchUpdate.propertiesToUpdate = ["differential": Double(0.0)]
-        batchUpdate.affectedStores = managedObjectContext?.persistentStoreCoordinator?.persistentStores
-        batchUpdate.resultType = .updatedObjectsCountResultType
-        do {
-            if let batchResult = try managedObjectContext?.execute(batchUpdate) as? NSBatchUpdateResult {
-                
-                presentAlert(
-                    title: "Alert",
-                    message: "\(batchResult.result ?? 0) players updated"
-                )
-                
-                playersInteractor?.resetPlayers()
-                self.tableView.reloadData()
-            }
-        } catch {
-            
-        }
+        playersInteractor?.resetPlayers(completion: {
+            self.tableView.reloadData()
+        })
+    }
+    
+    
+    @IBAction func setToZeroAction(_ sender: Any) {
+        playersInteractor?.setDifferentialToZero(completion: { updated in
+            presentAlert(title: "Alert", message: "\(updated) players batch updated")
+            self.tableView.reloadData()
+        })
     }
 }
 

@@ -17,10 +17,28 @@ class PersistCoreDataPlayers: PlayersPersitantStorage, ManagedContextEntity {
         managedObjectContext = context
     }
     
+    func removePlayers(completion: (_ error: Error?) -> Void) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "BasketballPlayerStoredEntity")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            try managedObjectContext?.execute(deleteRequest)
+            completion(nil)
+        } catch let error {
+            completion(error)
+        }
+    }
+    
     func save(players: [BasketballPlayer], success: SavePlayersPersitantStorageSuccess, error: PlayersPersitantStorageError) {
         
         guard let managedObjectContext = managedObjectContext else {
-            let userInfo: [String : Any] = Dictionary<String, Any>.createErrorUserInfoData(message: "Persistant storage save error", value: "Managed context error", comment: "Imposible to save data to a nil value")
+            
+            let userInfo: [String : Any] = Dictionary<String, Any>.createErrorUserInfoData(
+                message: "Persistant storage save error",
+                value: "Managed context error",
+                comment: "Imposible to save data to a nil value"
+            )
+            
             error(NSError(domain: "FetchCoreDataPlayers.app.com", code: 500, userInfo: userInfo))
             
             return
@@ -33,7 +51,12 @@ class PersistCoreDataPlayers: PlayersPersitantStorage, ManagedContextEntity {
         
         guard let playerEntityDescription = pled, let teamEntityDescription = ted, let positionEntityDescription = ped, let statsEntityDescription = sed else {
             
-            let userInfo = Dictionary<String, Any>.createErrorUserInfoData(message: "Persistant storage save error", value: "Managed context error", comment: "Entity description is nil")
+            let userInfo = Dictionary<String, Any>.createErrorUserInfoData(
+                message: "Persistant storage save error",
+                value: "Managed context error",
+                comment: "Entity description is nil"
+            )
+            
             error(NSError(domain: "FetchCoreDataPlayers.app.com", code: 501, userInfo: userInfo))
             
             return
@@ -157,5 +180,21 @@ class PersistCoreDataPlayers: PlayersPersitantStorage, ManagedContextEntity {
         }
         
         return players
+    }
+    
+    func setDifferentialToZero(completion: (_ updated: Int) -> Void) {
+        // This method will perform a batch update on the differential value of the player
+        let batchUpdate = NSBatchUpdateRequest(entityName: "BasketballPlayerStoredEntity")
+        batchUpdate.propertiesToUpdate = ["differential": Double(0.0)]
+        batchUpdate.affectedStores = managedObjectContext?.persistentStoreCoordinator?.persistentStores
+        batchUpdate.resultType = .updatedObjectsCountResultType
+        do {
+            if let batchResult = try managedObjectContext?.execute(batchUpdate) as? NSBatchUpdateResult {
+                
+                completion(batchResult.result as? Int ?? 0)
+            }
+        } catch {
+            
+        }
     }
 }

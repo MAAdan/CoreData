@@ -20,11 +20,7 @@ class PersistCoreDataPlayers: PlayersPersitantStorage, ManagedContextEntity {
     func save(players: [BasketballPlayer], success: SavePlayersPersitantStorageSuccess, error: PlayersPersitantStorageError) {
         
         guard let managedObjectContext = managedObjectContext else {
-            let userInfo: [String : Any] = [
-                NSLocalizedDescriptionKey :  NSLocalizedString("Persistant storage save error", value: "Managed context error ", comment: "Imposible to save data to a nil value"),
-                NSLocalizedFailureReasonErrorKey : NSLocalizedString("Persistant storage save error", value: "Managed context error ", comment: "Imposible to save data to a nil value"),
-                ]
-            
+            let userInfo: [String : Any] = Dictionary<String, Any>.createErrorUserInfoData(message: "Persistant storage save error", value: "Managed context error", comment: "Imposible to save data to a nil value")
             error(NSError(domain: "FetchCoreDataPlayers.app.com", code: 500, userInfo: userInfo))
             
             return
@@ -37,12 +33,9 @@ class PersistCoreDataPlayers: PlayersPersitantStorage, ManagedContextEntity {
         
         guard let playerEntityDescription = pled, let teamEntityDescription = ted, let positionEntityDescription = ped, let statsEntityDescription = sed else {
             
-            let userInfo: [String : Any] = [
-                NSLocalizedDescriptionKey :  NSLocalizedString("Persistant storage save error", value: "Managed context error ", comment: "Entity description is nil"),
-                NSLocalizedFailureReasonErrorKey : NSLocalizedString("Persistant storage save error", value: "Managed context error ", comment: "Entity description is nil"),
-                ]
-            
+            let userInfo = Dictionary<String, Any>.createErrorUserInfoData(message: "Persistant storage save error", value: "Managed context error", comment: "Entity description is nil")
             error(NSError(domain: "FetchCoreDataPlayers.app.com", code: 501, userInfo: userInfo))
+            
             return
         }
         
@@ -116,8 +109,11 @@ class PersistCoreDataPlayers: PlayersPersitantStorage, ManagedContextEntity {
                 error(err)
             }
         } else {
-            let userInfo = Dictionary<String, Any>.createErrorUserInfoData(message: "Persistant storage fetch error", value: "Managed context error", comment: "Imposible to fetch data from a nil value")
-            error(NSError(domain: "FetchCoreDataPlayers.app.com", code: 500, userInfo: userInfo))
+            error(NSError(domain: "FetchCoreDataPlayers.app.com", code: 500, userInfo: Dictionary<String, Any>.createErrorUserInfoData(
+                message: "Persistant storage fetch error",
+                value: "Managed context error",
+                comment: "Imposible to fetch data from a nil value"
+            )))
         }
     }
     

@@ -46,16 +46,7 @@ class PlayersInteractor {
                 self?.filteredPlayers = sortedPlayers
                 success(sortedPlayers)
             } else {
-                let userInfo: [String : Any] = [
-                    NSLocalizedDescriptionKey : NSLocalizedString(
-                        "Unknown error",
-                        value: "Unknown error",
-                        comment: "Unknown error"),
-                    NSLocalizedFailureReasonErrorKey : NSLocalizedString(
-                        "Unknown error",
-                        value: "Unknown error",
-                        comment: "Unknown error")
-                ]
+                let userInfo = Dictionary<String, Any>.createErrorUserInfoData(message: "Unknown error", value: "Unknown error", comment: "Unknown error")
                 
                 error(NSError(domain: "ListPlayersInteractor.app.com", code: 500, userInfo: userInfo))
             }
